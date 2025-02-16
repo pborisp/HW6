@@ -49,8 +49,8 @@ public class Main {
         }
         System.out.println();
 
-        // Задача №6
-        System.out.println("Задача №6:");
+        // Задача №5
+        System.out.println("Задача №5:");
         total = 0;
         salary = 15000;
         for (i = 1; total <= 12_000_000; i++) {
