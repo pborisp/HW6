@@ -1,5 +1,3 @@
-import java.util.Random;
-
 public class Main {
     public static void main(String[] args) {
         // Задача №1
@@ -8,11 +6,11 @@ public class Main {
         int salary = 15000;
         int i;
         for (i = 1; total <= 2_459_000; i++) {
-            total = total + total / 100;
-            total = total + salary;
+            total += total / 100;
+            total += salary;
             System.out.println("Месяц " + i + " сумма накоплений равна " + total + " рублей");
         }
-        System.out.println("Потребовалось " + i + " месяцев для накопления: " + total + " рублей");
+        System.out.println("Потребовалось " + (i - 1) + " месяцев для накопления: " + total + " рублей");
         System.out.println();
 
         // Задача №2
@@ -45,8 +43,8 @@ public class Main {
         total = 0;
         salary = 15000;
         for (i = 1; total <= 12_000_000; i++) {
-            total = total + total / 100 * 7;
-            total = total + salary;
+            total += total / 100 * 7;
+            total += salary;
             System.out.println("Месяц " + i + " сумма накоплений равна " + total + " рублей");
         }
         System.out.println();
@@ -56,8 +54,8 @@ public class Main {
         total = 0;
         salary = 15000;
         for (i = 1; total <= 12_000_000; i++) {
-            total = total + total / 100 * 7;
-            total = total + salary;
+            total += total / 100 * 7;
+            total += salary;
             if (i % 6 == 0) {
                 System.out.println("Месяц " + i + " сумма накоплений равна " + total + " рублей");
             }
@@ -81,12 +79,24 @@ public class Main {
         // Задача №7
         System.out.println("Задача №7:");
         int first;
-        first = (int) (Math.random () * 7) + 1;
-        for (i = first; i <= 31; i++) {
-            if ((i - first) % 7 == 0) {
-                System.out.println("Сегодня пятница, " + i + "-е число. Необходимо подготовить отчет");
-            }
+        first = (int) (Math.random() * 7) + 1;
+        while (first <= 31) {
+            System.out.println("Сегодня пятница, " + first + "-е число. Необходимо подготовить отчет");
+            first += 7;
         }
         System.out.println();
+
+        // Задача №8
+        System.out.println("Задача №8:");
+        int beginYear = 2025 - 200;
+        int finishYear = 2025 + 100;
+        int countYear = 79;
+        i = 0;
+        while (i < finishYear) {
+            if (i >= beginYear) {
+                System.out.println(i);
+            }
+            i += countYear;
+        }
     }
 }
