@@ -4,13 +4,14 @@ public class Main {
         System.out.println("Задача №1:");
         int total = 0;
         int salary = 15000;
-        int i;
-        for (i = 1; total <= 2_459_000; i++) {
+        int i=0;
+        while (total <= 2_459_000) {
             total += total / 100;
             total += salary;
+            i++;
             System.out.println("Месяц " + i + " сумма накоплений равна " + total + " рублей");
         }
-        System.out.println("Потребовалось " + (i - 1) + " месяцев для накопления: " + total + " рублей");
+        System.out.println("Потребовалось " + i + " месяцев для накопления: " + total + " рублей");
         System.out.println();
 
         // Задача №2
@@ -33,7 +34,7 @@ public class Main {
         int birthRate = 17;
         int mortality = 8;
         for (i = 1; i <= 10; i++) {
-            population = population + birthRate - mortality;
+            population += (birthRate - mortality) * population / 1000;
             System.out.println("Год " + i + ", численность населения составляет " + population + " человек");
         }
         System.out.println();
