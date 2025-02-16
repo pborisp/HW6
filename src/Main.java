@@ -37,5 +37,16 @@ public class Main {
             System.out.println("Год " + i + ", численность населения составляет " + population + " человек");
         }
         System.out.println();
+
+        // Задача №4
+        System.out.println("Задача №4:");
+        total = 0;
+        salary = 15000;
+        for (i = 1; total <= 12_000_000; i++) {
+            total = total + total / 100 * 7;
+            total = total + salary;
+            System.out.println("Месяц " + i + " сумма накоплений равна " + total + " рублей");
+        }
+        System.out.println();
     }
 }
