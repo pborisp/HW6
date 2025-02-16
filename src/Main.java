@@ -61,5 +61,19 @@ public class Main {
             }
         }
         System.out.println();
+
+        // Задача №6
+        System.out.println("Задача №6:");
+        total = 0;
+        salary = 15000;
+        int year = 9;
+        for (i = 1; i <= year * 12; i++) {
+            total += total / 100 * 7;
+            total += salary;
+            if (i % 6 == 0) {
+                System.out.println("Месяц " + i + " сумма накоплений равна " + total + " рублей");
+            }
+        }
+        System.out.println();
     }
 }
