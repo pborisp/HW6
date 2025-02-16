@@ -27,5 +27,15 @@ public class Main {
         System.out.println();
         System.out.println();
 
+        // Задача №3
+        System.out.println("Задача №3:");
+        int population = 12_000_000;
+        int birthRate = 17;
+        int mortality = 8;
+        for (i = 1; i <= 10; i++) {
+            population = population + birthRate - mortality;
+            System.out.println("Год " + i + ", численность населения составляет " + population + " человек");
+        }
+        System.out.println();
     }
 }
