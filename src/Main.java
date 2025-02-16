@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
         // Задача №1
@@ -72,6 +74,17 @@ public class Main {
             total += salary;
             if (i % 6 == 0) {
                 System.out.println("Месяц " + i + " сумма накоплений равна " + total + " рублей");
+            }
+        }
+        System.out.println();
+
+        // Задача №7
+        System.out.println("Задача №7:");
+        int first;
+        first = (int) (Math.random () * 7) + 1;
+        for (i = first; i <= 31; i++) {
+            if ((i - first) % 7 == 0) {
+                System.out.println("Сегодня пятница, " + i + "-е число. Необходимо подготовить отчет");
             }
         }
         System.out.println();
