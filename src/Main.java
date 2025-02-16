@@ -12,5 +12,20 @@ public class Main {
         }
         System.out.println("Потребовалось " + i + " месяцев для накопления: " + total + " рублей");
         System.out.println();
+
+        // Задача №2
+        System.out.println("Задача №2:");
+        i = 1;
+        while (i <= 10) {
+            System.out.print(i + " ");
+            i++;
+        }
+        System.out.println();
+        for (i = 10; i > 0; i--) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        System.out.println();
+
     }
 }
